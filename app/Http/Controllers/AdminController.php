@@ -31,6 +31,7 @@ class AdminController extends Controller
 
     public function viewHistory($id)
     {
-        return view('admin.viewHistory', ['data' => Payment::find($id)]);
+        $viewHistory = new Payment;
+        return view('admin.viewHistory', ['data' => $viewHistory->find($id)]);
     }
 }

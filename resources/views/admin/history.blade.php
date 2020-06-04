@@ -51,7 +51,7 @@
                 @foreach($data as $item)
                 <tr>
 
-                    <th scope="row"><a href="{{ route('viewHistory', $item->id) }}">{{$item->id}}</a></th>
+                    <th scope="row"><a href="{{ route('viewHistory', $item->id) }}">Ссылка на {{$item->id}}</a></th>
                     <th>{{$item->username}}</th>
                     <th>{{$item->payment_amount}}</th>
                     <th>{{$item->currency}}</th>

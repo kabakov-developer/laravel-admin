@@ -17,9 +17,13 @@ class PaymentsController extends Controller
 		$payment->username = $req->input('username');
 		$payment->card_number = $req->input('card_number');
 		$payment->payment_amount = $req->input('payment_amount');
+		$payment->currency = $req->input('currency','kzt');
+		// $payment->created_up = $req->update(['updated_at' => now()]);
 
 		$payment->save();
 
-		return redirect()->route('welcome');
+		// return redirect()->route('/');
+		return view('forms.success');
 	}
+
 }

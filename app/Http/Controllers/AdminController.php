@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\PaymentsController;
+use App\Models\Payment;
+
 
 class AdminController extends Controller
 {
@@ -23,6 +26,11 @@ class AdminController extends Controller
 
     public function history()
     {
-        return view('admin.history');
+        return view('admin.history', ['data' => Payment::all()]);
+    }
+
+    public function viewHistory($id)
+    {
+        return view('admin.viewHistory', ['data' => Payment::find($id)]);
     }
 }

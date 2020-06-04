@@ -19,7 +19,7 @@
         </div>
           <div class="form-group">
           <label for="phone">Номер телефона</label>
-          <input type="number" name="phone" id="phone" required class="form-control">
+          <input type="text" name="phone" id="phone" required class="form-control phone-form">
         </div>
         <div class="form-group">
           <label for="username">Имя и фамилия указанные на карте</label>
@@ -28,7 +28,7 @@
         <div class="form-group">
           <label for="card_number">Номер карты</label>
           <div class="input-group">
-            <input type="text" name="card_number" id="card_number" class="form-control" required>
+            <input type="number" name="card_number" id="card_number" class="form-control" required>
             <div class="input-group-append">
               <span class="input-group-text text-muted">
                   <i class="fa fa-cc-visa mx-1"></i>
@@ -71,9 +71,9 @@
                 <label for="currency"><span>Валюта</span></label>
                 <div class="input-group">
                  <select class="form-control" id="currency">
-                    <option value="kz">KZ</option>
-                    <option value="dollar">Dollar</option>
-                    <option value="rub">Rub</option>
+                    <option value="kzt">KZ</option>
+                    <!-- <option value="dollar">Dollar</option>
+                    <option value="rub">Rub</option> -->
                   </select>
                 </div>
               </div>

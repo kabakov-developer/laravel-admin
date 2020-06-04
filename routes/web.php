@@ -23,8 +23,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'AdminController@index')->middleware('auth');
-Route::get('/admin/history', 'AdminController@history')->middleware('auth');
-Route::get('/admin/view', 'AdminController@view')->middleware('auth');
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('auth');
+Route::get(
+	'/admin/history',
+	'AdminController@history')
+->name('history')->middleware('auth');
+Route::get(
+	'/admin/viewHistory/{id}',
+	'AdminController@viewHistory')
+->name('viewHistory')->middleware('auth');
 
-Route::post('/welcome/submit', 'PaymentsController@submit')->name('pay-form');
+Route::post('/forms/submit', 'PaymentsController@submit')->name('pay-form');
+Route::post('/home', 'homeController@indexWelcome');

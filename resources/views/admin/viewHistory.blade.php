@@ -48,17 +48,15 @@
                 </tr>
               </thead>
               <tbody>
-                @foreach($data as $item)
                 <tr>
-
-                    <th scope="row"><a href="{{ route('viewHistory', $item->id) }}">{{$item->id}}</a></th>
-                    <th>{{$item->username}}</th>
-                    <th>{{$item->payment_amount}}</th>
-                    <th>{{$item->currency}}</th>
+                    <th scope="row">{{$data->id}}</th>
+                    <th>{{$data->username}}</th>
+                    <th>{{$data->payment_amount}}</th>
+                    <th>{{$data->currency}}</th>
                 </tr>
-                  @endforeach
               </tbody>
               </table>
+            @endsection
             @show
         </div>
         <!-- /page content -->

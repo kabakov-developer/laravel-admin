@@ -1,4 +1,11 @@
-       
+<footer>
+  <div class="pull-right">
+    <div class="copyright text-center my-auto">
+        <span>&#169; PayMaximus {{ now()->year }}</span>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</footer>
 <!-- jQuery -->
 <script src="{{asset('admin-static/vendors/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap -->

@@ -13,6 +13,7 @@
                   <li><a href="{{ route('admin')}}">Вернуться обратно</a></li>
                 @endif
               <li><a href="{{ route('history')}}">История платежей</a></li>
+              <li><a href="{{ route('invoiceForPayment')}}">Создать платёж</a></li>
             </ul>
           </li>
         </ul>

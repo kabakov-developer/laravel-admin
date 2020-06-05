@@ -32,6 +32,11 @@ Route::get(
 	'/admin/viewHistory/{id}',
 	'AdminController@viewHistory')
 ->name('viewHistory')->middleware('auth');
+Route::get(
+	'/admin/invoceForPayment',
+	'AdminController@invoceForPayment')
+->name('invoceForPayment')->middleware('auth');
+
 
 Route::post('/forms/submit', 'PaymentsController@submit')->name('pay-form');
 Route::post('/home', 'homeController@indexWelcome');

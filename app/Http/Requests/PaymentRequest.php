@@ -32,6 +32,17 @@ class PaymentRequest extends FormRequest
         ];
     }
 
+    public function attributes()
+    {
+        return [
+            'email.request' => 'Поле email должно быть заполнено',
+            'phone.request' => 'Поле номер телефона должно быть заполнено',
+            'username.request' => 'Поле Имя и фимилия должно быть заполнено',
+            'card_numberail.request' => 'Поле номер карты должно быть заполнено',
+            'payment_amount.request' => 'Поле сумма оплаты должно быть заполнено'
+        ];
+    }
+
     public function messages()
     {
         return [

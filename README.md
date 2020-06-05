@@ -12,7 +12,7 @@
 	c. php artisan serve
 
 3. Для того, чтобы перейти в панель администратора, необзодимо зарегестрировать пользователя
-4. Проблемы, которые могут возникнуть при регистрации пользовтеля - не найден класс User(решенить проблему можно изменив одну/две строчки кода в файла RegisterController -  use use App\User; = App\Models\User; и auth.php -> providers -> 'model' => App\User::class, = 'model' => App\Models\User::class, )
+4. Проблемы, которые могут возникнуть при регистрации пользовтеля - не найден класс User(решенить проблему можно изменив одну/две строчки кода в файла RegisterController -  use use App\User; = App\Models\User; и auth.php -> providers -> 'model' => App\User::class, = 'model' => App\Models\User::class, изменить namespace в моделе User - namespace App; // namespace App\Models;)
 
 6. Что сделано?
 	- Выведены вьюшки для обычного пользователя и для зарегестрированного(админа/функционал реализован не до конца)

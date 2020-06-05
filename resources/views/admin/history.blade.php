@@ -38,27 +38,30 @@
         <!-- page content -->
         <div class="right_col" role="main">
             @section('content')
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Кто оплатил</th>
-                  <th scope="col">Сумма</th>
-                  <th scope="col">Валюта</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach($data as $item)
-                <tr>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Кто оплатил</th>
+                    <th scope="col">Сумма</th>
+                    <th scope="col">Валюта</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($data as $item)
+                  <tr>
 
-                    <th scope="row"><a href="{{ route('viewHistory', $item->id) }}">Ссылка на {{$item->id}}</a></th>
-                    <th>{{$item->username}}</th>
-                    <th>{{$item->payment_amount}}</th>
-                    <th>{{$item->currency}}</th>
-                </tr>
-                  @endforeach
-              </tbody>
+                      <th scope="row"><a href="{{ route('viewHistory', $item->id) }}">Ссылка на {{$item->id}}</a></th>
+                      <th>{{$item->username}}</th>
+                      <th>{{$item->payment_amount}}</th>
+                      <th>{{$item->currency}}</th>
+                  </tr>
+                    @endforeach
+                </tbody>
               </table>
+              <div>
+                {{ $data->links() }}
+              </div>
             @show
         </div>
         <!-- /page content -->

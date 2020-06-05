@@ -26,7 +26,8 @@ class AdminController extends Controller
 
     public function history()
     {
-        return view('admin.history', ['data' => Payment::all()]);
+        $data = Payment::paginate(10);
+        return view('admin.history', compact('data'));
     }
 
     public function viewHistory($id)

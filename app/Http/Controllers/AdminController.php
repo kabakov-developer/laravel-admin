@@ -35,9 +35,4 @@ class AdminController extends Controller
         $viewHistory = new Payment;
         return view('admin.viewHistory', ['data' => $viewHistory->find($id)]);
     }
-
-    public function invoceForPayment()
-    {
-        
-    }
 }

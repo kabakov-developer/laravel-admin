@@ -62,7 +62,7 @@
               <div class="form-group">
                <label><span>Сумма оплаты</span></label>
                 <div class="input-group">
-                  <input type="number" name="payment_amount" id="payment_amount" class="form-control" required>
+                  <input type="number" name="payment_amount" id="payment_amount" class="form-control"  step="0.01" required>
                 </div>
               </div>
             </div>
